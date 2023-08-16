@@ -2,6 +2,8 @@ package dados;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import conexaoDB.Conexao;
 
@@ -48,5 +50,37 @@ public class ClienteDAO {
 		}
 	}
 	
-
-}
+	public static boolean inserirCliente(Cliente cli) {
+		Connection conn = null;
+		PreparedStatement stat = null;
+		try {
+			String sql = "INSERT INTO" + "cliente( nome, email, endereco, cidade, estado, fone) " + "VALUES (?, ?, ?, ?, ?);";
+			
+			conn = Conexao.criarConexao();
+			stat = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+			stat.setString(1, cli.getNome());
+			stat.setString(2, cli.getEmail());
+			stat.setString(3, cli.getEndereco());
+			stat.setString(4, cli.getCidade());
+			stat.setString(5, cli.getEstado());
+			stat.setString(6, cli.getFone());
+			stat.execute();		
+			ResultSet rs = stat.getGeneratedKeys();
+			if (rs.next()) {
+				cli.setCodCliente(rs.getInt(1));
+			}
+			
+			return true;
+			
+		}
+		
+		catch (Exception e) {
+			System.out.println("ERRO: Cliente não inserido. " + e.getMessage());
+			return false;
+		}
+		
+		finally {
+			Conexao.fecharConexao(conn, stat);
+		}
+	}
+	
