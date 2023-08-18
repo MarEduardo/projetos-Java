@@ -3,11 +3,11 @@ package dados;
 public class Produtos {
 	private int codProduto = 0;
 	private String nome = "";
-	private String precoCusto = "";
-	private String precoVenda = "";
+	private double precoCusto = "";
+	private double precoVenda = "";
 	private int qtdeEstoque = 0;
-	private String unidade = "";
-	private String estoqueMin = "";
+	private int unidade = "";
+	private int estoqueMin = "";
 	private String categoria = "";
 	private int markUp = 0;
 	private boolean ativo = true;
@@ -32,16 +32,16 @@ public class Produtos {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getPrecoCusto() {
+	public double getPrecoCusto() {
 		return precoCusto;
 	}
-	public void setPrecoCusto(String precoCusto) {
+	public void setPrecoCusto(double precoCusto) {
 		this.precoCusto = precoCusto;
 	}
-	public String getPrecoVenda() {
+	public double getPrecoVenda() {
 		return precoVenda;
 	}
-	public void setPrecoVenda(String precoVenda) {
+	public void setPrecoVenda(double precoVenda) {
 		this.precoVenda = precoVenda;
 	}
 	public int getQtdeEstoque() {
@@ -50,16 +50,16 @@ public class Produtos {
 	public void setQtdeEstoque(int qtdeEstoque) {
 		this.qtdeEstoque = qtdeEstoque;
 	}
-	public String getUnidade() {
+	public int getUnidade() {
 		return unidade;
 	}
-	public void setUnidade(String unidade) {
+	public void setUnidade(int unidade) {
 		this.unidade = unidade;
 	}
-	public String getEstoqueMin() {
+	public int getEstoqueMin() {
 		return estoqueMin;
 	}
-	public void setEstoqueMin(String estoqueMin) {
+	public void setEstoqueMin(int estoqueMin) {
 		this.estoqueMin = estoqueMin;
 	}
 	public String getCategoria() {
