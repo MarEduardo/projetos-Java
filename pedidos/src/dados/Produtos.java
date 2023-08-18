@@ -88,18 +88,27 @@ public class Produtos {
 	}
 	
 	public static void incluirEstoq(int qte) {
-		
+		qte=1;
+		this.qtdeEstoque+=qte;
+		System.out.println("Quantidade adicionada de " + nome + "!");
+		System.out.println("quantidade atual do produto " + nome + " é de: " + qtdeEstoque);
 	}
 	
 	public static void retirarEstoq(int qte) {
-		
+		qte = 1;
+		this.qtdeEstoque -= qte;
+		System.out.println("Quantidade removida de " + nome + "!");
+		System.out.println("quantidade atual do produto " + nome + " é de: " + qtdeEstoque);
 	}
 	
 	public static void calcularNovoPrcVnd() {
-		
+		double margemCusto = 0;
+		margemCusto = precoVenda + precoCusto;
 	}
 	
 	public static void calcularNovoPrcVnd(double perct) {
-		
+		markUp = 100 / (margemCusto - (precoCusto + margemCusto);
+		precoVenda = markUp * precoCusto;
+		System.out.println("O preço de venda do produto " + nome + " é de: " + precoVenda);
 	}
 }
