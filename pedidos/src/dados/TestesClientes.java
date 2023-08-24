@@ -3,7 +3,10 @@ package dados;
 public class TestesClientes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		if(ClienteDAO.criarTabelaCliente()) {
+			System.out.println("Tabela Cliente criada com sucesso!");
+		}
+		else { System.out.println("deu não chefe"); }
 
 	}
 
