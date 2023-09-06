@@ -112,5 +112,7 @@ public class Pedido  {
 				+ ", transport=" + transport + ", Desconto=" + Desconto + "]";
 	}
 	
-	
+	/* eu sei, o método toString está totalmente errado, apenas mantive o dessa forma para em breve arrumar tudo direitinho para o funcionamento correto do sistema
+
+Lembrando que a classe pedido foi modelada para ser uma espécie de nota fiscal para o cliente pós compra de um produto de uma loja*/
 }
