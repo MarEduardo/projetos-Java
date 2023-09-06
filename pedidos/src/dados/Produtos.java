@@ -3,13 +3,13 @@ package dados;
 public class Produtos {
 	private int codProduto = 0;
 	private String nome = "";
-	private double precoCusto = "";
-	private double precoVenda = "";
+	private double precoCusto = 0;
+	private double precoVenda = 0;
 	private int qtdeEstoque = 0;
-	private int unidade = "";
-	private int estoqueMin = "";
+	private int unidade = 0;
+	private int estoqueMin = 0;
 	private String categoria = "";
-	private int markUp = 0;
+	private double markUp = 0;
 	private boolean ativo = true;
 	
 	public Produtos() {
@@ -68,10 +68,10 @@ public class Produtos {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public int getMarkUp() {
+	public double getMarkUp() {
 		return markUp;
 	}
-	public void setMarkUp(int markUp) {
+	public void setMarkUp(double markUp) {
 		this.markUp = markUp;
 	}
 	public boolean isAtivo() {
@@ -87,28 +87,30 @@ public class Produtos {
 				+ ", categoria=" + categoria + ", markUp=" + markUp + ", ativo=" + ativo + "]";
 	}
 	
-	public static void incluirEstoq(int qte) {
+	public void incluirEstoq(int qte) {
 		qte=1;
 		this.qtdeEstoque+=qte;
 		System.out.println("Quantidade adicionada de " + nome + "!");
-		System.out.println("quantidade atual do produto " + nome + " Ã© de: " + qtdeEstoque);
+		System.out.println("quantidade atual do produto " + nome + " é de: " + qtdeEstoque);
 	}
 	
-	public static void retirarEstoq(int qte) {
+	public void retirarEstoq(int qte) {
 		qte = 1;
 		this.qtdeEstoque -= qte;
 		System.out.println("Quantidade removida de " + nome + "!");
-		System.out.println("quantidade atual do produto " + nome + " Ã© de: " + qtdeEstoque);
+		System.out.println("quantidade atual do produto " + nome + " é de: " + qtdeEstoque);
 	}
 	
-	public static void calcularNovoPrcVnd() {
+	public void calcularNovoPrcVnd() {
 		double margemCusto = 0;
 		margemCusto = precoVenda + precoCusto;
 	}
 	
-	public static void calcularNovoPrcVnd(double perct) {
-		markUp = 100 / (margemCusto - (precoCusto + margemCusto);
+	public void calcularNovoPrcVnd (double perct) {
+		double margemCusto =0;
+		margemCusto = precoVenda + precoCusto;
+		markUp = 100 / (margemCusto - (precoCusto + margemCusto));
 		precoVenda = markUp * precoCusto;
-		System.out.println("O preÃ§o de venda do produto " + nome + " Ã© de: " + precoVenda);
+		System.out.println("O preço de venda do produto " + nome + " é de: " + precoVenda + "reais.");
 	}
 }
