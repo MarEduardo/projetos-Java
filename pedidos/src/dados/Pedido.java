@@ -1,6 +1,15 @@
 package dados;
 import java.util.ArrayList;
 public class Pedido  {
+	public Pedido(){
+	}
+	public Pedido(int numero, int chave, ArrayList<pedidos>listaDePedidos, 
+		      int prazo, String rastreio, double valorTotal, double pagto,
+		      String pagtoForma, String pagtoCond, String pagtoPrazo, double frete,
+		      String transport, double Desconto)
+	{
+		
+	}
 	
 	Cliente cli = new Cliente();
 	Produtos prod = new Produtos();
