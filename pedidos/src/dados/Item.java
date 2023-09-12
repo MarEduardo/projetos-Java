@@ -5,7 +5,7 @@ public class Item {
 	int qtde;
 	double valorUnitario;
 	double desconto;
-	boolean ativarDesc;
+	boolean ativarDesc = true;
 	public ativarDesconto(){
 		ativarDesc = true;
 	}
@@ -22,7 +22,10 @@ public class Item {
 		public double getPrecoVenda() {
 		return prod.getPrecoVenda();
 	}
-		
+		if (ativarDesc = true){
+			desconto = 0.84 /* 15% de desconto */
+		}
+		else { desconto = null; }
 	}
 	
 	
