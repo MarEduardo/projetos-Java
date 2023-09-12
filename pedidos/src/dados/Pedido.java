@@ -19,6 +19,8 @@ public class Pedido  {
 	double frete;
 	String transport;
 	double Desconto = peDesc.getDesconto();
+	
+	
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -105,11 +107,7 @@ public class Pedido  {
 	}
 	@Override
 	public String toString() {
-		return "Pedido [cli=" + cli + ", prod=" + prod + ", peDesc=" + peDesc + ", nomeCliente=" + nomeCliente
-				+ ", numero=" + numero + ", chave=" + chave + ", listaDePedidos=" + listaDePedidos + ", rastreio="
-				+ rastreio + ", prazo=" + prazo + ", valorTotal=" + valorTotal + ", pagto=" + pagto + ", pagtoForma="
-				+ pagtoForma + ", pagtoCond=" + pagtoCond + ", pagtoPrazo=" + pagtoPrazo + ", frete=" + frete
-				+ ", transport=" + transport + ", Desconto=" + Desconto + "]";
+		return "Pedido [;
 	}
 	
 	/* eu sei, o método toString está totalmente errado, apenas mantive o dessa forma para em breve arrumar tudo direitinho para o funcionamento correto do sistema
