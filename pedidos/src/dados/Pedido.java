@@ -8,10 +8,22 @@ public class Pedido  {
 		      String pagtoForma, String pagtoCond, String pagtoPrazo, double frete,
 		      String transport, double Desconto)
 	{
-		
+		numero = 01;
+		chave = 0001;
+		ArrayList<pedidos>listaDePedidos;
+		prazo = 30; /*dias*/
+		rastreio = "Muambaitor";
+		valorTotal = (prod.GetValorPreco * peDesc.GetDesconto) + frete;
+		pagtoForma = "Debito";
+		pagtoCond = "vista";
+		pagtoPrazo = "48 horas";
+		frete = 10;
+		transport = "Seguradora Real";
+		Desconto = peDesc.GetDesconto;
 	}
 	
 	Cliente cli = new Cliente();
+	cli.GetNome;
 	Produtos prod = new Produtos();
 	Pedido peDesc = new Pedido();
 	String nomeCliente = cli.getNome();
@@ -116,7 +128,9 @@ public class Pedido  {
 	}
 	@Override
 	public String toString() {
-		return "Pedido [;
+		return "Pedido [ Número do pedido: " + numero + "\n Nome do Cliente: " + cli.nome + "\n Chave do pedido: " + chave + "\n lista de itens: " + ArrayList<pedidos>listaDePedidos + 
+			"\n Prazo: " + prazo + "\n Rastreio: " + rastreio + "\n Valor Total: R$" + ValorTotal + "\n Informações do pagamento: " + "\n Forma: "pagtoForma + "\n Condição:"  \n pagtoCond +
+			"\n Prazo: " + pagtoPrazo + "\n Valor do frete: R$" + frete + "\n Transporte: " + transport + "\n Desconto aplicado: " + desconto + "]";
 	}
 	
 	/* eu sei, o método toString está totalmente errado, apenas mantive o dessa forma para em breve arrumar tudo direitinho para o funcionamento correto do sistema
